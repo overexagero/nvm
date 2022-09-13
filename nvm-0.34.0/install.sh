@@ -45,12 +45,12 @@ nvm_source() {
   local NVM_SOURCE_URL
   NVM_SOURCE_URL="$NVM_SOURCE"
   if [ "_$NVM_METHOD" = "_script-nvm-exec" ]; then
-    NVM_SOURCE_URL="https://raw.githubusercontent.com/overexagero/nvm/$(nvm_latest_version)/nvm-exec"
+    NVM_SOURCE_URL="https://raw.githubusercontent.com/overexagero/nvm/main/$(nvm_latest_version)/nvm-exec"
   elif [ "_$NVM_METHOD" = "_script-nvm-bash-completion" ]; then
-    NVM_SOURCE_URL="https://raw.githubusercontent.com/overexagero/nvm/$(nvm_latest_version)/bash_completion"
+    NVM_SOURCE_URL="https://raw.githubusercontent.com/overexagero/nvm/main/$(nvm_latest_version)/bash_completion"
   elif [ -z "$NVM_SOURCE_URL" ]; then
     if [ "_$NVM_METHOD" = "_script" ]; then
-      NVM_SOURCE_URL="https://raw.githubusercontent.com/overexagero/nvm/$(nvm_latest_version)/nvm.sh"
+      NVM_SOURCE_URL="https://raw.githubusercontent.com/overexagero/nvm/main/$(nvm_latest_version)/nvm.sh"
     elif [ "_$NVM_METHOD" = "_git" ] || [ -z "$NVM_METHOD" ]; then
       NVM_SOURCE_URL="https://github.com/overexagero/nvm.git"
     else
